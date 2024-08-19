@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'IRANSansX Regular';
+        src: url("../fonts/IRANSansX/IRANSansXRegular.ttf") format('truetype');
+    }
+    @font-face {
+        font-family: 'IRANSansX Medium';
+        src: url("../fonts/IRANSansX/IRANSansXMedium.ttf") format('truetype');
+    }
+    @font-face {
+        font-family: 'IRANSansX Bold';
+        src: url("../fonts/IRANSansX/IRANSansXBold.ttf") format('truetype');
+    }
+    @font-face {
+        font-family: 'IRANSansX DemiBold';
+        src: url("../fonts/IRANSansX/IRANSansXDemiBold.ttf") format('truetype');
+    }
+    @font-face {
+        font-family: 'Aquire';
+        src: url("../fonts/Aquire/Aquire.otf") format('opentype');
+    }
+    * {
+        outline: none !important;
+    }
+}
+
+@layer components {
+
+    input:focus,
+    textarea:focus {
+        border: 1px solid #ef4444 !important;
+    }
+
+    .search__input:focus {
+        border: none !important;
+    }
+
+    .bottom-header--scroll {
+        top: 0 !important;
+    }
+
+    .menu {
+        width: 476px;
+    }
+
+    .menu--hidden {
+        width: 0px !important;
+        overflow: hidden !important;
+    }
+
+    .menu__item--submenu:hover .submenu {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .submenu__items:hover + .default-category__items {
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .mobile__menu--open {
+        right: 0 !important;
+        left: 0 !important;
+    }
+
+    .mobile__basket--open {
+        left: 0 !important;
+    }
+
+    .mobile__submenu--open {
+        height: 194px !important;
+    }
+
+    .category-banner__item-five {
+        background: linear-gradient(90deg, rgba(88, 88, 0, 1) 0%, rgba(209, 222, 0, 1) 100%);
+    }
+
+    .category-banner__item-six {
+        background: linear-gradient(90deg, rgba(54, 23, 0, 1) 0%, rgba(222, 104, 0, 1) 100%);
+    }
+
+    .category-banner__item-one {
+        background: linear-gradient(90deg, rgba(0, 68, 47, 1) 0%, rgba(0, 180, 78, 1) 100%);
+    }
+
+    .category-banner__item-two {
+        background: linear-gradient(90deg, rgba(31, 0, 89, 1) 0%, rgba(133, 14, 252, 1) 100%);
+    }
+
+    .category-banner__item-three {
+        background: linear-gradient(90deg, rgba(68, 0, 17, 1) 0%, rgba(252, 14, 23, 1) 100%);
+    }
+
+    .category-banner__item-four {
+        background: linear-gradient(90deg, rgba(0, 44, 89, 1) 0%, rgba(14, 87, 252, 1) 100%);
+    }
+
+    .best-products__item-1 {
+        background: url('../images/banner/gaming.webp') center no-repeat;
+        background-size: cover;
+    }
+
+    .best-products__item-2 {
+        background: url('../images/banner/trading.webp') center no-repeat;
+        background-size: cover;
+    }
+
+    .best-products__item-3 {
+        background: url('../images/banner/programming.webp') center no-repeat;
+        background-size: cover;
+    }
+
+    .best-products__item-4 {
+        background: url('../images/banner/graphic.webp') center no-repeat;
+        background-size: cover;
+    }
+
+    .footer-menu__item {
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .footer-menu__item::before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        content: '';
+        background-color: #d1d5db;
+        width: 8px;
+        height: 4px;
+        border-radius: 15px;
+    }
+
+    .cover {
+
+    }
+
+    .cover--show {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .submenu-items__wrapper {
+            position: relative;
+        }
+
+        .submenu-items__wrapper::before {
+            position: absolute;
+            left: 0;
+            right: 20px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.15);
+            content: '';
+        }
+    }
+
+
+
+    /*   Start Codding Products Page  */
+    .filter-menu {
+        display: block;
+        max-height: 200px;
+    }
+
+    .filter-menu--toggle {
+        border: none !important;
+    }
+
+    .filter-menu--toggle + .filter-menu {
+        max-height: 0 !important;
+        display: none !important;
+    }
+
+    .filter__item-label {
+        padding-right: 12px;
+    }
+
+    .filter__item-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border: 1px solid #52525b;
+        color: transparent;
+    }
+
+    .products-pagination__item {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products-pagination__item--active {
+        background-color: #dc2626 !important;
+        color: white !important;
+        border: 1px solid #dc2626 !important;
+    }
+
+    /*   Finish Codding Products Page  */
+    /*  Codding ContactUs   */
+    .contactus__title {
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .contactus__title::after {
+        position: absolute;
+        content: ' * ';
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: black;
+    }
+
+    /*   Start Codding Panel Index   */
+    .panel-breadcrumb__link {
+        position: relative;
+    }
+
+    .panel-breadcrumb__link:not(:first-child)::before {
+        position: absolute;
+        content: '>';
+        right: -15px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: white;
+    }
+
+    .panel-menu__item {
+
+    }
+
+    .panel-menu__item-btn--open + ul {
+        display: flex !important;
+    }
+
+    .panel-menu__item-btn--open svg {
+        transform: rotate(180deg) !important;
+    }
+
+    .panel-menu--open {
+        right: 0 !important;
+    }
+
+    .panel-profile--open {
+        left: 0 !important;
+    }
+
+    .modal--show {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+
+    /*   Finish Codding Panel Index   */
+}
